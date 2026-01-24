@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Liber - Pagamento</title>
+</head>
+<body>
+     <header class="cabecalho">
+        <div class="cabecalho2">
+            <h1>Liber</h1>
+        </div>   
+     </header>   
+      <!--Formulario de Pagamento-->
+     <main>
+        <form action="processar-pagamneto" method="post">
+            <fieldset>
+                <legend>Informações de Pagamento</legend>
+
+                <!--Nome no cartão-->
+                <p>
+                    <label for="cardname">Nome no Cartão:</label>
+                    <input type="text" id="cardname" name="cardname" placeholder="Digite aqui..." required>
+                </p>
+
+                <!--Número do cartão-->
+                <p>
+                    <label for="cardnumber">Número do Cartão:</label>
+                    <input type="number" id="cardnumber" name="cardnumber" placeholder="Digite aqui..." required>
+                </p>
+
+                <!--Data de validade-->
+                <p>
+                    <label for="expdate">Data de Validade:</label>
+                    <input type="month" id="expdate" name="expdate" required>
+                </p>
+
+                <!--CVV-->
+                <p>
+                    <label for="cvv">CVV:</label>
+                        <input type="number" id="cvv" name="cvv" placeholder="Digite aqui..." required>
+                </p>
+            </fieldset>
+            <button type="submit" onclick="alert ('PAGMENTO FEITO COM SUCESSO!')">Finalizar Pagamento</button>
+        </form>
+     </main>
+</body>
+</html>
