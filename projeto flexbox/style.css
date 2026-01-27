@@ -1,0 +1,179 @@
+:root {
+    --cor-principal: #2c3e50;
+    --cor-detalhe: #e67e22;
+    --cor-fundo: #f4f7f6;
+    --cor-texto: #333;
+    --branco: #ffffff;
+    --transicao: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.cabecalho {
+    background-color: var(--cor-principal);
+    color: var(--branco);
+    padding: 1rem 0;
+}
+
+.cabecalho2 {
+    display: flex;           
+    flex-direction: row;       
+    justify-content: space-between; 
+    align-items: center;      
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu {
+    display: flex;            
+    gap: 25px;                 
+}
+
+.menu a {
+    font-weight: 500;
+    transition: var(--transicao);
+}
+
+.menu a:hover {
+    color: var(--cor-detalhe);
+}
+
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--branco);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    gap: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.main {
+    background-color: var(--cor-detalhe);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: var(--transicao);
+}
+
+.main:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+
+.catalogo {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    position: relative;
+}
+
+.gradeLivros {
+    display: flex;             
+    flex-wrap: wrap;          
+    justify-content: center;   
+    gap: 30px;                 
+}
+
+.book-card {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: var(--transicao);
+    flex: 1 1 300px;           
+    max-width: 320px;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+}
+
+.book-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.book-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card {
+    margin-top: 15px;
+    padding: 8px 20px;
+    border: 1px solid var(--cor-detalhe);
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.card a {
+    color: var(--cor-detalhe);
+    font-weight: bold;
+}
+
+.card:hover {
+    background-color: var(--cor-detalhe);
+}
+
+.card:hover a {
+    color: var(--branco);
+}
+
+
+@media (max-width: 768px) {
+    .cabecalho2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+}
