@@ -166,6 +166,31 @@ ul {
     color: var(--branco);
 }
 
+footer {
+    background-color: #333;
+    color: #fff; 
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; 
+}
+
+
 
 @media (max-width: 768px) {
     .cabecalho2 {
