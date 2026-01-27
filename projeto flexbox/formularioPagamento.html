@@ -1,48 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Liber - Pagamento</title>
+    <title>Liber - Pagamento</title>
+    <link rel="stylesheet" href="formularioPagamento.css">
 </head>
 <body>
-     <header class="cabecalho">
+
+    <header class="cabecalho">
         <div class="cabecalho2">
-            <h1>Liber</h1>
+            <h1 class="logo">Liber<span>.</span></h1>
         </div>   
-     </header>   
-      <!--Formulario de Pagamento-->
-     <main>
-        <form action="processar-pagamneto" method="post">
+    </header>   
+
+    <main class="container">
+        <form action="processar-pagamento" method="post" class="form-pagamento">
+            
+            <div class="pagamento-header">
+                <span class="icon-cart">💳</span>
+                <div class="titulo-texto">
+                    <h2>Informações de Pagamento</h2>
+                    <p>Ambiente Seguro e Criptografado</p>
+                </div>
+            </div>
+
             <fieldset>
-                <legend>Informações de Pagamento</legend>
-
-                <!--Nome no cartão-->
-                <p>
+                <p class="campo-grupo">
                     <label for="cardname">Nome no Cartão:</label>
-                    <input type="text" id="cardname" name="cardname" placeholder="Digite aqui..." required>
+                    <input type="text" id="cardname" name="cardname" placeholder="Como aparece no cartão" required>
                 </p>
 
-                <!--Número do cartão-->
-                <p>
+                <p class="campo-grupo">
                     <label for="cardnumber">Número do Cartão:</label>
-                    <input type="number" id="cardnumber" name="cardnumber" placeholder="Digite aqui..." required>
+                    <input type="number" id="cardnumber" name="cardnumber" placeholder="0000 0000 0000 0000" required>
                 </p>
 
-                <!--Data de validade-->
-                <p>
-                    <label for="expdate">Data de Validade:</label>
-                    <input type="month" id="expdate" name="expdate" required>
-                </p>
+                <div class="linha-dupla">
+                    <p class="campo-grupo">
+                        <label for="expdate">Data de Validade:</label>
+                        <input type="month" id="expdate" name="expdate" required>
+                    </p>
 
-                <!--CVV-->
-                <p>
-                    <label for="cvv">CVV:</label>
-                        <input type="number" id="cvv" name="cvv" placeholder="Digite aqui..." required>
-                </p>
+                    <p class="campo-grupo">
+                        <label for="cvv">CVV:</label>
+                        <input type="number" id="cvv" name="cvv" placeholder="123" required>
+                    </p>
+                </div>
             </fieldset>
-            <button type="submit" onclick="alert ('PAGMENTO FEITO COM SUCESSO!')">Finalizar Pagamento</button>
+
+            <button type="submit" onclick="alert('PAGAMENTO FEITO COM SUCESSO!')">Finalizar Pagamento</button>
         </form>
-     </main>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Liber Livraria. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
