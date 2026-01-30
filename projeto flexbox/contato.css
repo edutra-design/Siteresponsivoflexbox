@@ -108,13 +108,29 @@ button:hover {
 
 
 footer {
+    background-color: #333;
+    color: #fff; 
     text-align: center;
-    padding: 40px 0;
-    margin-top: 50px;
-    background-color: #2c3e50;
-    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; 
+}
 
 @media (max-width: 600px) {
     nav {
