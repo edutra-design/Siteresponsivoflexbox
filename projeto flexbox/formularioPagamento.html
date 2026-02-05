@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liber - Pagamento</title>
+    <link rel="stylesheet" href="formularioPagamento.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <a href="index.html" class="btn-voltar">← Voltar</a> 
+
+        <div class="logo-box">
+            <span class="logo-letra">L</span>
+            <span class="logo-nome">Liber</span>
+        </div>   
+    </header>   
+
+    <main class="container">
+        <form action="processar-pagamento" method="post" class="form-pagamento">
+            
+            <div class="pagamento-header">
+                <span class="icon-cart">💳</span>
+                <div class="titulo-texto">
+                    <h2>Informações de Pagamento</h2>
+                    <p>Ambiente Seguro e Criptografado</p>
+                </div>
+            </div>
+
+            <fieldset>
+                <p class="campo-grupo">
+                    <label for="cardname">Nome no Cartão:</label>
+                    <input type="text" id="cardname" name="cardname" placeholder="Como aparece no cartão" required>
+                </p>
+
+                <p class="campo-grupo">
+                    <label for="cardnumber">Número do Cartão:</label>
+                    <input type="number" id="cardnumber" name="cardnumber" placeholder="0000 0000 0000 0000" required>
+                </p>
+
+                <div class="linha-dupla">
+                    <p class="campo-grupo">
+                        <label for="expdate">Data de Validade:</label>
+                        <input type="month" id="expdate" name="expdate" required>
+                    </p>
+
+                    <p class="campo-grupo">
+                        <label for="cvv">CVV:</label>
+                        <input type="number" id="cvv" name="cvv" placeholder="123" required>
+                    </p>
+                </div>
+            </fieldset>
+
+            <button type="submit">Finalizar Pagamento</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Liber Livraria. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
 
