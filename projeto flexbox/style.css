@@ -1,1 +1,236 @@
+:root {
+    --cor-principal: #2c3e50;
+    --cor-detalhe: #e67e22;
+    --cor-fundo: #f4f7f6;
+    --cor-texto: #333;
+    --branco: #ffffff;
+    --transicao: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- ESTILO DO NOVO HEADER --- */
+.cabecalho {
+    background-color: var(--cor-principal);
+    color: var(--branco);
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.cabecalho2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-letra {
+    background-color: var(--cor-detalhe);
+    color: var(--branco);
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.logo-nome {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    font-weight: 500;
+    transition: var(--transicao);
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.menu a:not(.btn-contato)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cor-detalhe);
+    transition: var(--transicao);
+}
+
+.menu a:hover::after, .menu a.link-ativo::after {
+    width: 100%;
+}
+
+.menu a:hover {
+    color: var(--cor-detalhe);
+}
+
+.btn-contato {
+    background-color: var(--cor-detalhe);
+    color: var(--branco) !important;
+    padding: 8px 20px !important;
+    border-radius: 25px;
+}
+
+/* --- RESTANTE DO SEU CÓDIGO (MANTIDO) --- */
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--branco);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.main {
+    background-color: var(--cor-detalhe);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: var(--transicao);
+}
+
+.main:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+
+.catalogo {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.gradeLivros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.book-card {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: var(--transicao);
+    flex: 1 1 300px;
+    max-width: 320px;
+}
+
+.book-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.card {
+    margin-top: 15px;
+    padding: 8px 20px;
+    border: 1px solid var(--cor-detalhe);
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.card a {
+    color: var(--cor-detalhe);
+    font-weight: bold;
+}
+
+.card:hover {
+    background-color: var(--cor-detalhe);
+}
+
+.card:hover a {
+    color: var(--branco);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .cabecalho2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+}
 
