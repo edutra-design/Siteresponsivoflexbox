@@ -1,1 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease; 
+}
 
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f7f6; 
+    color: #333;              
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- NOVO HEADER PADRONIZADO (MUDANÇA SOLICITADA) --- */
+.cabecalho {
+    background-color: #2c3e50; 
+    padding: 15px 0;
+    display: flex;           
+    justify-content: center;  
+    align-items: center;      
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-voltar {
+    position: absolute;
+    left: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 1px solid #e67e22; 
+    border-radius: 4px;        
+}
+
+.btn-voltar:hover {
+    background-color: #e67e22;
+    transform: translateX(-3px);
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-letra {
+    background-color: #e67e22;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.logo-nome {
+    color: #ffffff;          
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+.form-pagamento {
+    background: #ffffff;        
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 12px;        
+    border: 1px solid #ddd;   
+    display: flex;            
+    flex-direction: column;   
+    gap: 20px;                 
+}
+
+.pagamento-header {
+    display: flex;             
+    align-items: center;        
+    gap: 15px;                
+    border-bottom: 2px solid #f4f7f6;
+    padding-bottom: 20px;
+}
+
+.icon-cart {
+    font-size: 1.8rem;
+    background: #f4f7f6;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.titulo-texto h2 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.titulo-texto p {
+    font-size: 0.8rem;
+    color: #e67e22;            
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.linha-dupla {
+    display: flex;            
+    gap: 20px;                 
+    flex-wrap: wrap;          
+}
+
+.linha-dupla .campo-grupo {
+    flex: 1;                 
+    min-width: 120px;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input {
+    padding: 12px;            
+    border: 2px solid #eee;    
+    border-radius: 6px;        
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #e67e22;     
+}
+
+button {
+    background-color: #e67e22; 
+    color: #ffffff;            
+    padding: 15px;             
+    border: none;
+    border-radius: 6px;        
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2c3e50; 
+    transform: translateY(-2px); 
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #333;
+}
